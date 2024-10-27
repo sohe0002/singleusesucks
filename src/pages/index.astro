@@ -4,6 +4,10 @@ import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
+import plastikforurening from "../assets/images/plastikforurening.jpeg";
+import plastikflaskemfisk from "../assets/images/plastikflaskemfisk.svg";
+import plastikflaske from "../assets/images/plastikflaske.svg";
+import fisk from "../assets/images/fisk.svg";
 ---
 
 <MainLayout title="Titel">
@@ -52,12 +56,14 @@ import thumbsup from "../assets/images/thumbsup.png";
     </section>
 
     <section>
-      <h2 class="font-sigmar text-4xl text-rød pt-20 pb-8">
+      <h2
+        class="font-sigmar text-4xl text-rød pt-20 pb-8 grid justify-items-center"
+      >
         Hvad er plastikforurening?
       </h2>
 
       <div class="grid grid-cols-2">
-        <div>
+        <div class="px-40 pt-10">
           <p class="font-rubik pb-10">
             Plastikforurening opstår, når plastikaffald ender i naturen, især
             havene, hvor det truer dyrelivet og bliver til mikroplast, som
@@ -75,30 +81,38 @@ import thumbsup from "../assets/images/thumbsup.png";
             fødekæden og forurene vores mad og vand.
           </p>
         </div>
-        <div>image</div>
+        <div>
+          <Image src={plastikflaskemfisk} alt="billede af en plastikflaske" />
+        </div>
       </div>
     </section>
 
     <section>
       <div class="grid grid-cols-2">
-        <div>image</div>
-        <div class="bg-grøn">
-          <h2 class="font-sigmar text-hvid text-4xl">
+        <div>
+          <Image src={plastikforurening} alt="billede af plastikforurening" />
+        </div>
+        <div class="bg-grøn px-20 py-24">
+          <h2 class="font-sigmar text-hvid text-4xl pb-8">
             Problemet med plastikforurening
           </h2>
           <p class="font-rubik text-hvid">
             Plastikforurening udgør en alvorlig trussel mod miljøet, klimaet og
             vores sundhed. Plastik findes nu overalt, og vi indtager det gennem
             både luft og mad, men forskerne ved endnu ikke præcist, hvilke
-            konsekvenser dette har for vores helbred. <br />
-            <br />
-            <br />Plastikproduktionen skaber drivhusgasser hele vejen fra
-            udvinding af olie til bortskaffelse, og mikroplast forværrer
-            klimaforandringer ved at skade økosystemer som alger, der er
-            afgørende for at reducere CO2 i atmosfæren. <br />
-            <br />
-            <br />Samtidig udgør plastikaffald en fare for dyrelivet, hvor det
-            kan føre til kvælning, sult og kemikalieforgiftning i både havdyr og
+            konsekvenser dette har for vores helbred.
+          </p>
+          <br />
+          <p class="font-rubik text-hvid">
+            Plastikproduktionen skaber drivhusgasser hele vejen fra udvinding af
+            olie til bortskaffelse, og mikroplast forværrer klimaforandringer
+            ved at skade økosystemer som alger, der er afgørende for at reducere
+            CO2 i atmosfæren.
+          </p>
+          <br />
+          <p class="font-rubik text-hvid">
+            Samtidig udgør plastikaffald en fare for dyrelivet, hvor det kan
+            føre til kvælning, sult og kemikalieforgiftning i både havdyr og
             mennesker.
           </p>
         </div>
