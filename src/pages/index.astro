@@ -12,6 +12,12 @@ import billede1 from "../assets/images/billede1.jpg";
 import billede2 from "../assets/images/billede2.jpg";
 import billede3 from "../assets/images/billede3.jpg";
 import billede4 from "../assets/images/billede4.jpg";
+import råd1 from "../assets/images/råd1.jpg";
+import råd2 from "../assets/images/råd2.jpg";
+import råd3 from "../assets/images/råd3.jpg";
+import råd4 from "../assets/images/råd4.jpg";
+import råd5 from "../assets/images/råd5.jpg";
+import råd6 from "../assets/images/råd6.jpg";
 ---
 
 <MainLayout title="Titel">
@@ -218,6 +224,55 @@ import billede4 from "../assets/images/billede4.jpg";
       </p>
     </section>
 
+    <div class="overflow-clip pt-44">
+      <section id="horisontalscrollsection" class="h-[500vw]">
+        <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
+          <li
+            class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd1} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd2} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd3} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd4} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd5} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd6} class="h-[500px] w-[400px]" alt="foto" />
+            </figure>
+          </li>
+        </ul>
+      </section>
+    </div>
+
     <section>
       <p class="text-4xl">Donér sektion</p>
     </section>
@@ -301,4 +356,16 @@ import billede4 from "../assets/images/billede4.jpg";
     </p>
     <Image src={thumbsup} alt="" />
   </article>
+
+  <script>
+    import { animate } from "motion";
+    import { scroll } from "motion";
+
+    scroll(
+      animate("#horisontalliste", {
+        transform: ["none", "translateX(-400vw)"],
+      }),
+      { target: document.querySelector("#horisontalscrollsection") }
+    );
+  </script>
 </MainLayout>
