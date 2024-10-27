@@ -1,15 +1,114 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <article>
+    <section>
+      <h1 class="font-sigmar text-rød text-8xl">#Singleusesucks</h1>
+      <p class="font-rubik max-w-md">
+        Plastikforurening truer vores hav og dyreliv. Millioner af tons plastik
+        ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde
+        i dag!
+      </p>
+      <Button>Støt nu</Button>
+    </section>
+    <section
+      class="whitespace-nowrap overflow-x-hidden bg-lysgrå text-grå text-lg py-2"
+    >
+      <div
+        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+      >
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+      </div>
+      <div
+        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+        aria-hidden="true"
+      >
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+        <span>MAKE A CHANGE</span>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="font-sigmar text-4xl text-rød pt-20 pb-8">
+        Hvad er plastikforurening?
+      </h2>
+
+      <div class="grid grid-cols-2">
+        <div>
+          <p class="font-rubik pb-10">
+            Plastikforurening opstår, når plastikaffald ender i naturen, især
+            havene, hvor det truer dyrelivet og bliver til mikroplast, som
+            spreder sig i økosystemet.
+          </p>
+
+          <p class="font-rubik pb-10">
+            Plastikken nedbrydes ikke naturligt og kan skade både dyr og
+            mennesker ved at ophobe toksiner.
+          </p>
+
+          <p class="font-rubik pb-10">
+            Dette globale problem har alvorlige konsekvenser for havets
+            økosystemer og menneskers sundhed, da mikroplast kan ende i
+            fødekæden og forurene vores mad og vand.
+          </p>
+        </div>
+        <div>image</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="grid grid-cols-2">
+        <div>image</div>
+        <div class="bg-grøn">
+          <h2 class="font-sigmar text-hvid text-4xl">
+            Problemet med plastikforurening
+          </h2>
+          <p class="font-rubik text-hvid">
+            Plastikforurening udgør en alvorlig trussel mod miljøet, klimaet og
+            vores sundhed. Plastik findes nu overalt, og vi indtager det gennem
+            både luft og mad, men forskerne ved endnu ikke præcist, hvilke
+            konsekvenser dette har for vores helbred. <br />
+            <br />
+            <br />Plastikproduktionen skaber drivhusgasser hele vejen fra
+            udvinding af olie til bortskaffelse, og mikroplast forværrer
+            klimaforandringer ved at skade økosystemer som alger, der er
+            afgørende for at reducere CO2 i atmosfæren. <br />
+            <br />
+            <br />Samtidig udgør plastikaffald en fare for dyrelivet, hvor det
+            kan føre til kvælning, sult og kemikalieforgiftning i både havdyr og
+            mennesker.
+          </p>
+        </div>
+      </div>
+    </section>
+    <p>
+      Link til <Link href="https://www.kea.dk" target="_blank"
+        >En anden side</Link
+      >
+    </p>
+    <Image src={thumbsup} alt="" />
+  </article>
 </MainLayout>

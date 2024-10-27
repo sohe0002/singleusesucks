@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+  .sigmar-regular {
+    @apply font-sigmar font-normal;
+  }
 
+  .rubik-regular {
+    @apply font-rubik font-normal;
+  }
+
+  .rubik-bold {
+    @apply font-rubik font-bold;
+  }
 }
