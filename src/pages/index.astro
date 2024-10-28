@@ -18,22 +18,29 @@ import råd3 from "../assets/images/råd3.jpg";
 import råd4 from "../assets/images/råd4.jpg";
 import råd5 from "../assets/images/råd5.jpg";
 import råd6 from "../assets/images/råd6.jpg";
+import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
+import bølger from "../assets/images/bølger.jpg";
 ---
 
 <MainLayout title="Titel">
   <article>
     <section>
-      <h1 class="font-sigmar text-rød text-8xl">#Singleusesucks</h1>
-      <p class="font-rubik max-w-md">
+      <h1 class="font-sigmar text-9xl pb-10 pl-10">
+        #Singleuse <br />
+        <span class="text-rød">sucks</span>
+      </h1>
+      <p class="font-rubik max-w-md pb-6 pl-10">
         Plastikforurening truer vores hav og dyreliv. Millioner af tons plastik
         ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde
         i dag!
       </p>
-      <Button>Støt nu</Button>
+      <div class="pl-10 pb-10">
+        <Button>Støt nu</Button>
+      </div>
     </section>
 
     <section
-      class="whitespace-nowrap overflow-x-hidden bg-lysgrå text-grå text-lg py-2"
+      class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
     >
       <div
         class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
@@ -98,7 +105,7 @@ import råd6 from "../assets/images/råd6.jpg";
       </div>
     </section>
 
-    <section>
+    <!-- <section>
       <div class="grid grid-cols-2">
         <div>
           <Image src={plastikforurening} alt="billede af plastikforurening" />
@@ -128,6 +135,40 @@ import råd6 from "../assets/images/råd6.jpg";
           </p>
         </div>
       </div>
+    </section> -->
+
+    <section class="relative w-full">
+      <div>
+        <Image
+          src={bølger}
+          class="w-full h-full object-cover"
+          alt="billede af plastikforurening"
+        />
+      </div>
+
+      <div class="absolute inset-0 flex flex-col p-6 mt-24 max-w-lg left-[55%]">
+        <h2 class="font-sigmar text-hvid text-4xl pb-8">
+          Problemet med plastikforurening
+        </h2>
+        <p class="font-rubik text-hvid">
+          Plastikforurening udgør en alvorlig trussel mod miljøet, klimaet og
+          vores sundhed. Plastik findes nu overalt, og vi indtager det gennem
+          både luft og mad, men forskerne ved endnu ikke præcist, hvilke
+          konsekvenser dette har for vores helbred.
+        </p>
+        <br />
+        <p class="font-rubik text-hvid">
+          Plastikproduktionen skaber drivhusgasser hele vejen fra udvinding af
+          olie til bortskaffelse, og mikroplast forværrer klimaforandringer ved
+          at skade økosystemer som alger, der er afgørende for at reducere CO2 i
+          atmosfæren.
+        </p>
+        <br />
+        <p class="font-rubik text-hvid">
+          Samtidig udgør plastikaffald en fare for dyrelivet, hvor det kan føre
+          til kvælning, sult og kemikalieforgiftning i både havdyr og mennesker.
+        </p>
+      </div>
     </section>
 
     <section class="py-20">
@@ -135,10 +176,10 @@ import råd6 from "../assets/images/råd6.jpg";
     </section>
 
     <section>
-      <h2 class="font-sigmar text-rød text-4xl pb-8 grid justify-items-center">
+      <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
         Hvordan gør vi en forskel?
       </h2>
-      <p class="font-rubik w-1/3 mx-auto pb-14">
+      <p class="font-rubik mx-96 pb-14">
         Plastic Change arbejder for at forebygge plastikforurening ved at fremme
         genbrug og cirkulære løsninger. De samarbejder med iværksættere,
         industri og politikere for at løse årsagerne til forureningen, som
