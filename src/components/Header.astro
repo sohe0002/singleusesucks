@@ -1,5 +1,83 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.svg";
+import Button from "./Button.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div x-data="{ showmenu: false }" class="p-4 relative z-30 h-full">
+  <div id="navbar" class="flex flex-row justify-between py-5 px-2 items-center">
+    <a href="/"> <Image src={logo} alt="" class="w-[130px]" /></a>
+
+    <div id="logo" class="text-hvid">
+      <!-- Desktop menu -->
+      <nav id="desktopmenu" class="hidden lg:block">
+        <ul class="flex flex-row gap-6 text-black items-center">
+          <li><Link href="/" class="p-1">PLASTIKFORUDRENING</Link></li>
+          <li><Link href="/">VORES ROLLE</Link></li>
+          <li><Link href="/">BIDRAG</Link></li>
+          <li><Link href="/">MERCH</Link></li>
+
+          <li>
+            <Button>
+              <Link href="/">Støt</Link>
+            </Button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile menu -->
+      <nav
+        id="mobilmenu"
+        class="fixed inset-0 flex flex-col bg-white z-200 pt-32"
+        x-show="showmenu"
+        x-transition
+        x-on:click="showmenu = false"
+        x-on:click.outside="showmenu = false"
+      >
+        <button class="absolute top-5 right-5" x-on:click="showmenu = false">
+          <!-- Kryds -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="#E52622"
+            class="w-9 h-9"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <ul class="flex flex-col gap-6 text-center text-[#E52622] open-sans">
+          <li><Link href="/cocktail_index">COCKTAILS</Link></li>
+          <li><Link href="/cocktail_kursus">COCKTAIL KURSUS</Link></li>
+          <li><Link href="/kontakt">KONTAKT</Link></li>
+        </ul>
+      </nav>
+
+      <!-- Burger menu button -->
+      <button
+        id="burgermenu"
+        class="lg:hidden"
+        x-on:click="showmenu = !showmenu"
+      >
+        <!-- Burger -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#E52622"
+          viewBox="0 0 20 20"
+          class="w-8 h-9"
+          x-show="!showmenu"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
 </div>
