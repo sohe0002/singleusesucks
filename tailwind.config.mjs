@@ -6,6 +6,7 @@ export default {
             colors: {
                 rød: "#FF1054",
                 grøn: "#008481",
+                mørkgrøn: "#005553",
                 lysgrå: "#CACDD5",
                 grå: "#70727E",
                 hvid: "#FFFFFF",

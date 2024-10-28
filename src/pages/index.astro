@@ -21,8 +21,7 @@ import råd6 from "../assets/images/råd6.jpg";
 import råd7 from "../assets/images/råd7.jpg";
 import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
 import bølger from "../assets/images/bølger.jpg";
-import hjerte from "../assets/images/hjerte.svg";
-import rødhjerte from "../assets/images/rødhjerte.svg";
+import halvhval from "../assets/images/halvhval.svg";
 ---
 
 <MainLayout title="Titel">
@@ -41,18 +40,6 @@ import rødhjerte from "../assets/images/rødhjerte.svg";
         <Button
           class="relative inline-flex items-center space-x-2 hover:text-rød"
         >
-          <div class="relative">
-            <Image
-              src={hjerte}
-              alt="hjerteicon"
-              class="w-6 h-6 block hover:hidden"
-            />
-            <Image
-              src={rødhjerte}
-              alt="hjerteicon red"
-              class="w-6 h-6 hidden hover:block"
-            />
-          </div>
           <span class="font-rubik">STØT NU</span>
         </Button>
       </div>
@@ -416,12 +403,40 @@ import rødhjerte from "../assets/images/rødhjerte.svg";
       </div>
     </section>
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank">
-        En anden side
-      </Link>
-    </p>
-    <Image src={thumbsup} alt="" />
+    <section>
+      <div class="grid grid-cols-2">
+        <div class="pl-20">
+          <h2 class="font-sigmar text-grøn text-4xl max-w-sm pt-32">
+            Tilmeld dig til vores nyhedsbrev
+          </h2>
+          <p class="font-rubik max-w-lg">
+            Tilmeld dig vores nyhedsbrev og få opdateringer om vores arbejde mod
+            plastikforurening, nye projekter og bæredygtige løsninger.
+          </p>
+
+          <div class="mt-8 max-w-md pb-32">
+            <div class="grid grid-cols-1 gap-6">
+              <label class="block">
+                <input
+                  type="email"
+                  class="mt-1 block w-full rounded-md border-mørkgrøn border-2 shadow-sm focus:border-grøn focus:ring focus:ring-grøn focus:ring-opacity-50 placeholder:text-mørkgrøn"
+                  placeholder="navn@mail.com"
+                />
+              </label>
+              <button
+                type="submit"
+                class="w-full py-2 px-4 bg-grøn text-white font-semibold rounded-md hover:bg-mørkgrøn transition-colors duration-300"
+              >
+                Tilmeld
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pt-20">
+          <Image src={halvhval} alt="billede af en halv hval" />
+        </div>
+      </div>
+    </section>
   </article>
 
   <script>
