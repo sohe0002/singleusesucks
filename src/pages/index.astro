@@ -21,6 +21,8 @@ import råd6 from "../assets/images/råd6.jpg";
 import råd7 from "../assets/images/råd7.jpg";
 import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
 import bølger from "../assets/images/bølger.jpg";
+import hjerte from "../assets/images/hjerte.svg";
+import rødhjerte from "../assets/images/rødhjerte.svg";
 ---
 
 <MainLayout title="Titel">
@@ -36,7 +38,23 @@ import bølger from "../assets/images/bølger.jpg";
         i dag!
       </p>
       <div class="pl-10 pb-10">
-        <Button>Støt nu</Button>
+        <Button
+          class="relative inline-flex items-center space-x-2 hover:text-rød"
+        >
+          <div class="relative">
+            <Image
+              src={hjerte}
+              alt="hjerteicon"
+              class="w-6 h-6 block hover:hidden"
+            />
+            <Image
+              src={rødhjerte}
+              alt="hjerteicon red"
+              class="w-6 h-6 hidden hover:block"
+            />
+          </div>
+          <span class="font-rubik">STØT NU</span>
+        </Button>
       </div>
     </section>
 
