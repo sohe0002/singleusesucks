@@ -1,0 +1,114 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import knustFlaske from "../assets/images/knust_flaske.png";
+---
+
+<section class="relative overflow-hidden pb-[160px]">
+  <h1 class="font-sigmar text-9xl pb-10 pl-10 lg:ml-28 lg:mt-28">
+    #Singleuse <br />
+    <span class="text-rød">sucks</span>
+  </h1>
+  <p class="font-rubik max-w-md pb-6 pl-10 lg:ml-28 lg:text-lg">
+    Plastikforurening truer vores hav og dyreliv. Millioner af tons plastik
+    ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde i
+    dag!
+  </p>
+  <div class="pl-10 pb-10 lg:ml-28">
+    <Button class="relative inline-flex items-center space-x-2 hover:text-rød">
+      <span class="font-rubik">STØT NU</span>
+    </Button>
+  </div>
+
+  <div class="absolute inset-0 pointer-events-none flasker-container"></div>
+</section>
+
+<script>
+  import knustFlaske from "../assets/images/knust_flaske.png";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const flaskerContainer = document.querySelector(".flasker-container");
+    if (!flaskerContainer) return;
+
+    const antalFlasker = 40; // Antal flasker der skal falde
+    function createFallingFlask() {
+      // Opret et nyt img-element for flasken
+      const flaske = document.createElement("img");
+      flaske.src = "/src/assets/images/knust_flaske.png";
+      flaske.alt = "Knust flaske";
+      flaske.classList.add("flaske", "absolute", "opacity-80");
+
+      // Sæt flaskens størrelse
+      flaske.style.width = "170px"; // Juster denne værdi som ønsket
+      flaske.style.height = "auto"; // Bevar proportioner
+
+      // Start flaskerne lidt udenfor toppen af skærmen
+      flaske.style.top = `${-Math.random() * 100 - 210}px`; // starter mellem -200px over skærmen
+      flaske.style.left = Math.random() * (window.innerWidth - 60) + "px"; // Tilfældig horisontal startposition
+
+      // Tilføj en tilfældig roteret startposition
+      const startRotation = Math.random() * 360;
+      flaske.style.transform = `rotate(${startRotation}deg)`;
+
+      // Tilføj flasken til containeren
+      flaskerContainer.appendChild(flaske);
+
+      // Tilfældig faldhastighed og forsinkelse
+      const fallSpeed = 0.1 + Math.random() * 0.2; // hastighed mellem 0.1 og 0.3
+      const delay = Math.random() * 3000; // Forsinkelse op til 3 sekunder
+      const rotationSpeed = (Math.random() - 0.5) * 0.1; // Rotation mellem -0.05 og 0.05 pr. frame
+
+      // Start animationen for faldet
+      let start = null;
+      function animateFlask(timestamp) {
+        if (!start) start = timestamp;
+        const elapsed = timestamp - start;
+
+        // Beregn faldhastighed og afstand (efter eventuel forsinkelse)
+        if (elapsed < delay) {
+          requestAnimationFrame(animateFlask);
+          return;
+        }
+
+        // Ændret til kun at falde 800 pixels
+        const fallDistance = Math.min(
+          fallSpeed * (elapsed - delay) ** 0.5 * 100,
+          800 // Maksimum afstand flasken må falde
+        );
+
+        flaske.style.top = `${fallDistance}px`;
+
+        // Roter flasken langsomt, så længe den falder
+        if (fallDistance < 600) {
+          const rotation = startRotation + rotationSpeed * (elapsed - delay);
+          flaske.style.transform = `rotate(${rotation}deg)`; // Opdater rotation, mens flasken falder
+        } else {
+          // Når flasken rammer bunden, stop med at rotere og sæt en fast rotation
+          flaske.style.transform = `rotate(${startRotation}deg)`; // Stop rotation ved landing
+        }
+
+        // Når flasken rammer bunden (600 pixels fra toppen)
+        if (fallDistance >= 600) {
+          flaske.classList.add("bund-position"); // Stop animation
+          flaske.style.top = `600px`; // Sætter flasken til at være 600 pixels fra toppen
+
+          // Tilfældig placering i bunken
+          flaske.style.left =
+            parseFloat(flaske.style.left) + (Math.random() * 30 - 30) + "px";
+        } else {
+          requestAnimationFrame(animateFlask);
+        }
+      }
+
+      // Start flaskens fald animation
+      requestAnimationFrame(animateFlask);
+    }
+
+    // Opret flasker løbende
+    for (let i = 0; i < antalFlasker; i++) {
+      setTimeout(createFallingFlask, i * 500); // Tilføj en ny flaske hvert 0,5 sekund
+    }
+  });
+</script>

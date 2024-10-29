@@ -15,3 +15,24 @@
     @apply font-rubik font-bold;
   }
 }
+
+@layer utilities {
+  .flaske {
+    @apply absolute top-0 opacity-80 w-16 transition-all duration-500 ease-out;
+  }
+  .bund-position {
+    animation: none !important;
+    @apply opacity-100;
+  }
+}
+
+@keyframes fald {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 1;
+  }
+}
