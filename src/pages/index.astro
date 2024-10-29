@@ -24,6 +24,9 @@ import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
 import bølger from "../assets/images/bølger.jpg";
 import halvhval from "../assets/images/halvhval.svg";
 import plastikhjerte from "../assets/images/plastikhjerte.svg";
+import storfisk from "../assets/images/stor_fisk.jpg";
+import datafisk from "../assets/images/data_fisk.jpg";
+import skildpadde from "../assets/images/skildpadde.jpg";
 ---
 
 <MainLayout title="Titel">
@@ -181,291 +184,412 @@ import plastikhjerte from "../assets/images/plastikhjerte.svg";
       </div>
     </section>
 
-    <section class="py-20">
-      <p>fisk med fakta</p>
-    </section>
+    <section class="bg-white flex justify-center items-center min-h-screen">
+      <div class="relative max-w-lg mx-auto">
+        <!-- Delfin med Skildpadde -->
+        <div class="relative flex flex-col items-center">
+          <div class="relative">
+            {/* Delfin-billede */}
+            <Image src={storfisk} class="w-48" alt="Delfin" />
 
-    <section>
-      <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
-        Hvordan gør vi en forskel?
-      </h2>
-      <p class="font-rubik mx-96 pb-14">
-        Plastic Change arbejder for at forebygge plastikforurening ved at fremme
-        genbrug og cirkulære løsninger. De samarbejder med iværksættere,
-        industri og politikere for at løse årsagerne til forureningen, som
-        overproduktion og dårlige produktdesigns. <br /><br />Gennem politisk
-        påvirkning, undervisning og folkeoplysning skaber de en bevægelse, der
-        kræver handling mod plastikkrisen. Målet er at spare på jordens
-        ressourcer og forhindre, at plastik ender som affald og forurener
-        naturen.
-      </p>
-      <div class="relative flex items-center h-screen w-full">
-        <Image
-          src={billede1}
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-        <p
-          class="w-3/4 lg:w-2/5 ml-auto p-10 bg-hvid text-lg sticky top-1/4 mr-14"
-        >
-          Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om
-          konsekvenserne med plastikforurening og hvad vi mener er løsningerne
-          til det.
-        </p>
-      </div>
+            {/* Skildpadde-billede, placeret med overlap */}
+            <Image
+              src={skildpadde}
+              class="absolute top-0 -right-4 w-16"
+              alt="Skildpadde"
+            />
 
-      <div class="relative flex items-center h-screen w-full">
-        <Image
-          src={billede2}
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-        <p
-          class="w-3/4 lg:w-2/5 mr-auto p-10 bg-hvid text-lg sticky top-1/4 ml-14"
-        >
-          Vi arbejder med politik og grøn lovgivning, blandt andet kæmper vi for
-          ambitiøse nationale mål for reduktion og genbrug af plastik.
-        </p>
-      </div>
-
-      <div class="relative flex items-center h-screen w-full">
-        <Image
-          src={billede3}
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-        <p
-          class="w-3/4 lg:w-2/5 ml-auto p-10 bg-hvid text-lg sticky top-1/4 mr-14"
-        >
-          Vi samarbejder med industri-aktører om konkrete løsninger i praksis og
-          industriel innovation.
-        </p>
-      </div>
-
-      <div class="relative flex items-center h-screen w-full">
-        <Image
-          src={billede4}
-          alt=""
-          class="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-        <p
-          class="w-3/4 lg:w-2/5 mr-auto p-10 bg-hvid text-lg sticky top-1/4 ml-14"
-        >
-          Vi vidensindsamler, laver undervisningsforløb og uddanner, bl.a. børn
-          og unge i landets folkeskoler og gymnasieuddannelser om
-          plastikforurening, produktion og forbrug.
-        </p>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="font-sigmar text-rød text-4xl pb-8 pl-14 pt-20">
-        Hvad kan du gøre?
-      </h2>
-      <p class="font-rubik pl-14 w-1/3">
-        Du kan reducere plastikforurening i din hverdag ved at bruge mindre
-        plastik og undgå engangsprodukter, selvom det kan være en udfordring. <br
-        />
-        <br />
-        Derudover kan du skabe forandring ved at tale om plastikforurening med din
-        omgangskreds, dele viden og inspirere andre til at være opmærksomme på problemet.
-        <br />
-        <br />
-        Vores 7 råd:
-      </p>
-    </section>
-
-    <div class="overflow-clip pt-44">
-      <section id="horisontalscrollsection" class="h-[500vw]">
-        <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
-          <li
-            class="pl-0 flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd1} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd2} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd3} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd4} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd5} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd6} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd7} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-        </ul>
-      </section>
-    </div>
-
-    <section>
-      <div class="bg-lysgrå flex flex-col justify-between h-full">
-        <div class="pl-12">
-          <h2 class="text-rød font-rubik font-bold pt-20 text-3xl">Støt os</h2>
-          <h3 class="text-hvid font-rubik font-bold text-4xl max-w-lg pt-4">
-            Beskyt vores verden mod plastikforurening nu!
-          </h3>
-        </div>
-        <div class="flex justify-start mt-auto">
-          <Image
-            src={plastikhjerte}
-            alt="billede af hjerte af plastikflasker"
-            style={{ marginBottom: "-130px" }}
-          />
-        </div>
-      </div>
-    </section>
-
-    <section
-      class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
-    >
-      <div
-        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
-      >
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-      </div>
-      <div
-        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
-        aria-hidden="true"
-      >
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-      </div>
-    </section>
-
-    <section>
-      <p class="text-4xl">Merchandice sektion</p>
-    </section>
-
-    <section
-      class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
-    >
-      <div
-        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
-      >
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-      </div>
-      <div
-        class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
-        aria-hidden="true"
-      >
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-        <span>MAKE A CHANGE</span>
-      </div>
-    </section>
-
-    <section>
-      <div class="grid grid-cols-2">
-        <div class="pl-20">
-          <h2 class="font-sigmar text-grøn text-4xl max-w-sm pt-32">
-            Tilmeld dig til vores nyhedsbrev
-          </h2>
-          <p class="font-rubik max-w-lg">
-            Tilmeld dig vores nyhedsbrev og få opdateringer om vores arbejde mod
-            plastikforurening, nye projekter og bæredygtige løsninger.
-          </p>
-
-          <div class="mt-8 max-w-md pb-32">
-            <div class="grid grid-cols-1 gap-6">
-              <label class="block">
-                <input
-                  type="email"
-                  class="mt-1 block w-full rounded-md border-mørkgrøn border-2 shadow-sm focus:border-grøn focus:ring focus:ring-grøn focus:ring-opacity-50 placeholder:text-mørkgrøn"
-                  placeholder="navn@mail.com"
-                />
-              </label>
-              <button
-                type="submit"
-                class="w-full py-2 px-4 bg-grøn text-white font-semibold rounded-md hover:bg-mørkgrøn transition-colors duration-300"
-              >
-                Tilmeld
-              </button>
+            {/* Tekst over delfinen */}
+            <div
+              class="absolute top-1/3 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+            >
+              <h1 class="text-rød text-6xl font-bold">8</h1>
+              <div class="text-center text-gray-600 text-sm">
+                <p class="font-bold">millioner tons plastikaffald</p>
+                <p>flyder rundt i verdenshavene</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="pt-20">
-          <Image src={halvhval} alt="billede af en halv hval" />
+
+        <!-- Olieforbrug -->
+        <div class="flex flex-row gap-2 items-start mt-12 text-gray-600">
+          <h1 class="text-rød text-6xl font-bold">438</h1>
+          <div>
+            <h2 class="font-bold">millioner tons olie</h2>
+            <p>bruges årligt til plastikproduktion</p>
+          </div>
+        </div>
+
+        <!-- Emballageaffald -->
+        <div class="flex flex-row gap-2 items-start mt-12 text-gray-600">
+          <h1 class="text-rød text-6xl font-bold">38,7</h1>
+          <div>
+            <h2 class="font-bold">kilo emballage</h2>
+            <p>
+              bruges årligt af en gennemsnitlig dansker, og forbruget er fortsat
+              stigende
+            </p>
+          </div>
+        </div>
+
+        <!-- Havpattedyrs død -->
+        <div class="flex flex-row gap-2 items-start mt-12 text-gray-600">
+          <h1 class="text-rød text-6xl font-bold">100</h1>
+          <div>
+            <h2 class="font-bold">tusinde havpattedyr</h2>
+            <p>dør hvert år på grund af plastik i havet ifølge FN</p>
+          </div>
         </div>
       </div>
+
+      <section class="py-20">
+        <div>
+          <Image
+            src={storfisk}
+            class="h-[80%] object-cover"
+            alt="billede af plastikforurening"
+          />
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+          <div>
+            <h1 class="text-rød text-6xl font-bold">8</h1>
+          </div>
+          <div>
+            <h2 class="font-bold">millioner tons plastikaffald</h2>
+            <p>flyder rundt i verdenshavene</p>
+          </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+          <div>
+            <h1 class="text-rød text-6xl font-bold">438</h1>
+          </div>
+          <div>
+            <h2 class="font-bold">millioner tons olie</h2>
+            <p>bruges årligt til plastikproduktion</p>
+          </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+          <div>
+            <h1 class="text-rød text-6xl font-bold">38,7</h1>
+          </div>
+          <div>
+            <h2 class="font-bold">kilo emballage</h2>
+            <p>
+              bruges årligt af en gennemsnitlig dansker, og forbruget er fortsat
+              stigende
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-row gap-2 items-center">
+          <div>
+            <h1 class="text-rød text-6xl font-bold">100</h1>
+          </div>
+          <div>
+            <h2 class="font-bold">tusinde havpattedyr</h2>
+            <p>dør hvert år på grund af plastik i havet ifølge FN</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <Image
+            src={datafisk}
+            class="h-[50%] object-cover"
+            alt="billede af plastikforurening"
+          />
+        </div>
+      </section>
+       ¨
+      <section>
+        <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
+          Hvordan gør vi en forskel?
+        </h2>
+        <p class="font-rubik mx-96 pb-14">
+          Plastic Change arbejder for at forebygge plastikforurening ved at
+          fremme genbrug og cirkulære løsninger. De samarbejder med
+          iværksættere, industri og politikere for at løse årsagerne til
+          forureningen, som overproduktion og dårlige produktdesigns. <br /><br
+          />Gennem politisk påvirkning, undervisning og folkeoplysning skaber de
+          en bevægelse, der kræver handling mod plastikkrisen. Målet er at spare
+          på jordens ressourcer og forhindre, at plastik ender som affald og
+          forurener naturen.
+        </p>
+        <div class="relative flex items-center h-screen w-full">
+          <Image
+            src={billede1}
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+          <p
+            class="w-3/4 lg:w-2/5 ml-auto p-10 bg-hvid text-lg sticky top-1/4 mr-14"
+          >
+            Vi mobiliserer og engagerer befolkningen, gennem folkeoplysning om
+            konsekvenserne med plastikforurening og hvad vi mener er løsningerne
+            til det.
+          </p>
+        </div>
+
+        <div class="relative flex items-center h-screen w-full">
+          <Image
+            src={billede2}
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+          <p
+            class="w-3/4 lg:w-2/5 mr-auto p-10 bg-hvid text-lg sticky top-1/4 ml-14"
+          >
+            Vi arbejder med politik og grøn lovgivning, blandt andet kæmper vi
+            for ambitiøse nationale mål for reduktion og genbrug af plastik.
+          </p>
+        </div>
+
+        <div class="relative flex items-center h-screen w-full">
+          <Image
+            src={billede3}
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+          <p
+            class="w-3/4 lg:w-2/5 ml-auto p-10 bg-hvid text-lg sticky top-1/4 mr-14"
+          >
+            Vi samarbejder med industri-aktører om konkrete løsninger i praksis
+            og industriel innovation.
+          </p>
+        </div>
+
+        <div class="relative flex items-center h-screen w-full">
+          <Image
+            src={billede4}
+            alt=""
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+          />
+          <p
+            class="w-3/4 lg:w-2/5 mr-auto p-10 bg-hvid text-lg sticky top-1/4 ml-14"
+          >
+            Vi vidensindsamler, laver undervisningsforløb og uddanner, bl.a.
+            børn og unge i landets folkeskoler og gymnasieuddannelser om
+            plastikforurening, produktion og forbrug.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="font-sigmar text-rød text-4xl pb-8 pl-14 pt-20">
+          Hvad kan du gøre?
+        </h2>
+        <p class="font-rubik pl-14 w-1/3">
+          Du kan reducere plastikforurening i din hverdag ved at bruge mindre
+          plastik og undgå engangsprodukter, selvom det kan være en udfordring. <br
+          />
+          <br />
+           Derudover kan du skabe forandring ved at tale om plastikforurening
+          med din omgangskreds, dele viden og inspirere andre til at være
+          opmærksomme på problemet.
+          <br />
+          <br />
+           Vores 7 råd:
+        </p>
+      </section>
+
+      <div class="overflow-clip pt-44">
+        <section id="horisontalscrollsection" class="h-[500vw]">
+          <ul
+            id="horisontalliste"
+            class="list-none pl-0 flex sticky top-[10vh]"
+          >
+            <li
+              class="pl-0 flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd1} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd2} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd3} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd4} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd5} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd6} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+            <li
+              class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            >
+              <figure class="flex flex-row max-w-[800px]">
+                <Image src={råd7} class="w-2/3" alt="foto" />
+              </figure>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section>
+        <div class="bg-lysgrå flex flex-col justify-between h-full">
+          <div class="pl-12">
+            <h2 class="text-rød font-rubik font-bold pt-20 text-3xl">
+              Støt os
+            </h2>
+            <h3 class="text-hvid font-rubik font-bold text-4xl max-w-lg pt-4">
+              Beskyt vores verden mod plastikforurening nu!
+            </h3>
+          </div>
+          <div class="flex justify-start mt-auto">
+            <Image
+              src={plastikhjerte}
+              alt="billede af hjerte af plastikflasker"
+              style={{ marginBottom: "-130px" }}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
+      >
+        <div
+          class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+        >
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+        </div>
+        <div
+          class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+          aria-hidden="true"
+        >
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+        </div>
+      </section>
+
+      <section>
+        <p class="text-4xl">Merchandice sektion</p>
+      </section>
+
+      <section
+        class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
+      >
+        <div
+          class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+        >
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+        </div>
+        <div
+          class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+          aria-hidden="true"
+        >
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+          <span>MAKE A CHANGE</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid grid-cols-2">
+          <div class="pl-20">
+            <h2 class="font-sigmar text-grøn text-4xl max-w-sm pt-32">
+              Tilmeld dig til vores nyhedsbrev
+            </h2>
+            <p class="font-rubik max-w-lg">
+              Tilmeld dig vores nyhedsbrev og få opdateringer om vores arbejde
+              mod plastikforurening, nye projekter og bæredygtige løsninger.
+            </p>
+
+            <div class="mt-8 max-w-md pb-32">
+              <div class="grid grid-cols-1 gap-6">
+                <label class="block">
+                  <input
+                    type="email"
+                    class="mt-1 block w-full rounded-md border-mørkgrøn border-2 shadow-sm focus:border-grøn focus:ring focus:ring-grøn focus:ring-opacity-50 placeholder:text-mørkgrøn"
+                    placeholder="navn@mail.com"
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="w-full py-2 px-4 bg-grøn text-white font-semibold rounded-md hover:bg-mørkgrøn transition-colors duration-300"
+                >
+                  Tilmeld
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="pt-20">
+            <Image src={halvhval} alt="billede af en halv hval" />
+          </div>
+        </div>
+      </section>
     </section>
+
+    <script>
+      import { animate } from "motion";
+      import { scroll } from "motion";
+
+      scroll(
+        animate("#horisontalliste", {
+          transform: ["none", "translateX(-400vw)"],
+        }),
+        { target: document.querySelector("#horisontalscrollsection") }
+      );
+    </script>
   </article>
-
-  <script>
-    import { animate } from "motion";
-    import { scroll } from "motion";
-
-    scroll(
-      animate("#horisontalliste", {
-        transform: ["none", "translateX(-400vw)"],
-      }),
-      { target: document.querySelector("#horisontalscrollsection") }
-    );
-  </script>
 </MainLayout>
