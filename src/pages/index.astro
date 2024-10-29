@@ -8,6 +8,7 @@ import plastikforurening from "../assets/images/plastikforurening.jpeg";
 import plastikflaskemfisk from "../assets/images/plastikflaskemfisk.svg";
 import plastikflaske from "../assets/images/plastikflaske.svg";
 import fisk from "../assets/images/fisk.svg";
+import bgBillede from "../assets/images/bg_billede.svg";
 import billede1 from "../assets/images/billede1.jpg";
 import billede2 from "../assets/images/billede2.jpg";
 import billede3 from "../assets/images/billede3.jpg";
@@ -18,11 +19,20 @@ import råd3 from "../assets/images/råd3.jpg";
 import råd4 from "../assets/images/råd4.jpg";
 import råd5 from "../assets/images/råd5.jpg";
 import råd6 from "../assets/images/råd6.jpg";
+import Flaskefisk from "../components/Flaskefisk.astro";
 import råd7 from "../assets/images/råd7.jpg";
 import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
 import bølger from "../assets/images/bølger.jpg";
 import halvhval from "../assets/images/halvhval.svg";
 import plastikhjerte from "../assets/images/plastikhjerte.svg";
+import storfisk from "../assets/images/stor_fisk.png";
+import datafisk from "../assets/images/data_fisk.png";
+import skildpadde from "../assets/images/skildpadde.svg";
+import horsk from "../assets/images/horsk.png";
+import aborre from "../assets/images/aborre.png";
+import blåstak from "../assets/images/blåstak.png";
+
+import plastikpose from "../assets/images/plastikpose.png";
 import kop from "../assets/images/kop.png";
 import tshirt from "../assets/images/tshirt.png";
 import bgmerch from "../assets/images/bgmerch.jpg";
@@ -83,7 +93,7 @@ import bgmerch from "../assets/images/bgmerch.jpg";
       </div>
     </section>
 
-    <section>
+    <!-- <section>
       <h2
         class="font-sigmar text-4xl text-rød pt-20 pb-8 grid justify-items-center"
       >
@@ -114,6 +124,8 @@ import bgmerch from "../assets/images/bgmerch.jpg";
         </div>
       </div>
     </section>
+ -->
+    <Flaskefisk />
 
     <!-- <section>
       <div class="grid grid-cols-2">
@@ -181,11 +193,117 @@ import bgmerch from "../assets/images/bgmerch.jpg";
       </div>
     </section>
 
-    <section class="py-20">
-      <p>fisk med fakta</p>
+    <section class="flex justify-center items-center min-h-screen">
+      <div class="absolute z-10">
+        <Image src={bgBillede} class="w-full pt-96" alt="Skildpadde" />
+      </div>
+      <div class="relative z-20">
+        <!-- Delfin med Skildpadde -->
+        <div class="relative flex flex-col items-center">
+          <div class="relative">
+            {/* Delfin-billede */}
+            <Image src={storfisk} class="w-2/3 pl-32" alt="Delfin" />
+
+            {/* Skildpadde-billede, placeret med overlap */}
+            <Image
+              src={skildpadde}
+              class="absolute top-0 -right-4 w-[200px]"
+              alt="Skildpadde"
+            />
+          </div>
+        </div>
+        <Image
+          src={plastikpose}
+          class="absolute top-[120px] right-[200px] w-[200px]"
+          alt="Skildpadde"
+        />
+
+        <Image
+          src={horsk}
+          class="absolute top-[200px] left-[20px] w-[100px]"
+          alt="Skildpadde"
+        />
+        <Image
+          src={aborre}
+          class="absolute top-[400px] right-[10px] w-[100px]"
+          alt="Skildpadde"
+        />
+        <Image
+          src={plastikpose}
+          class="absolute top-[800px] left-[-200px] w-[200px]"
+          alt="Skildpadde"
+        />
+
+        <Image
+          src={plastikpose}
+          class="absolute top-[700px] right-[-100px] w-[300px]"
+          alt="Skildpadde"
+        />
+        <Image
+          src={blåstak}
+          class="absolute top-[1000px] right-[190px] w-[100px]"
+          alt="Skildpadde"
+        />
+
+        {/* Tekst over delfinen */}
+        <div class="absolute top-[680px] flex items-center">
+          <h1 class="text-red-500 text-6xl font-bold">8</h1>
+          <div class="text-black text-sm">
+            <p class="font-bold">millioner tons plastikaffald</p>
+            <p>
+              flyder rundt i verdenshavene <span class="text-[10px] mb-12"
+                >2</span
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- Olieforbrug -->
+        <div class="absolute top-[380px] left-[500px] flex items-center">
+          <h1 class="text-red-500 text-6xl font-bold">438</h1>
+          <div>
+            <h2 class="font-bold">millioner tons olie</h2>
+            <p>bruges årligt til plastikproduktion</p>
+          </div>
+        </div>
+
+        <!-- Emballageaffald -->
+        <div class="absolute top-[880px] left-[270px] flex items-center">
+          <h1 class="text-red-500 text-6xl font-bold">38,7</h1>
+          <div>
+            <h2 class="font-bold">kilo emballage</h2>
+            <p>
+              bruges årligt af en gennemsnitlig dansker, og forbruget er fortsat
+              stigende
+            </p>
+          </div>
+        </div>
+
+        <!-- Havpattedyrs død -->
+        <div class="absolute top-[1100px] left-[70px] flex items-center">
+          <h1 class="text-red-500 text-6xl font-bold">100</h1>
+          <div>
+            <h2 class="font-bold">tusinde havpattedyr</h2>
+            <p>dør hvert år på grund af plastik i havet ifølge FN</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>
+      <div class="absolute z-10">
+        <Image src={bgBillede} class="w-full pt-72" alt="Skildpadde" />
+      </div>
+      <div class="flex justify-center relative z-20">
+        <Image
+          src={datafisk}
+          class="w-1/2 pt-32"
+          alt="billede af plastikforurening"
+        />
+      </div>
+    </section>
+    ¨
+    <section class="relative z-20">
       <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
         Hvordan gør vi en forskel?
       </h2>
@@ -258,78 +376,76 @@ import bgmerch from "../assets/images/bgmerch.jpg";
       </div>
     </section>
 
-    <section>
-      <h2 class="font-sigmar text-rød text-4xl pb-8 pl-14 pt-20">
-        Hvad kan du gøre?
-      </h2>
-      <p class="font-rubik pl-14 w-1/3">
-        Du kan reducere plastikforurening i din hverdag ved at bruge mindre
-        plastik og undgå engangsprodukter, selvom det kan være en udfordring. <br
-        />
-        <br />
-        Derudover kan du skabe forandring ved at tale om plastikforurening med din
-        omgangskreds, dele viden og inspirere andre til at være opmærksomme på problemet.
-        <br />
-        <br />
-        Vores 7 råd:
-      </p>
+    <section id="horisontalscrollsection" class="h-[1200px] pt-32 pl-2">
+      <ul id="horisontalliste" class="list-none flex pl-0 sticky top-[10vh]">
+        <li
+          class="flex w-[800px] items-start justify-center flex-col flex-shrink-0 pl-32"
+        >
+          <h2 class="font-sigmar text-grøn text-4xl pb-8">Hvad kan du gøre?</h2>
+          <p class="font-rubik w-[50%]">
+            Du kan reducere plastikforurening i din hverdag ved at bruge mindre
+            plastik og undgå engangsprodukter, selvom det kan være en
+            udfordring. <br />
+            <br />
+            Derudover kan du skabe forandring ved at tale om plastikforurening med
+            din omgangskreds, dele viden og inspirere andre til at være opmærksomme
+            på problemet.
+            <br />
+            <br />
+            Vores 7 råd:
+          </p>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd1} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd2} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd3} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd4} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd5} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd6} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+        <li
+          class="flex w-[300px] items-start justify-center flex-col flex-shrink-0"
+        >
+          <figure class="flex flex-row">
+            <Image src={råd7} class="w-3/4" alt="foto" />
+          </figure>
+        </li>
+      </ul>
     </section>
-
-    <div class="overflow-clip pt-44">
-      <section id="horisontalscrollsection" class="h-[500vw]">
-        <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
-          <li
-            class="pl-0 flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd1} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd2} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd3} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd4} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd5} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd6} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-          <li
-            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
-          >
-            <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd7} class="w-2/3" alt="foto" />
-            </figure>
-          </li>
-        </ul>
-      </section>
-    </div>
 
     <section>
       <div class="bg-hvid flex flex-col justify-between h-full">
