@@ -1,5 +1,25 @@
 ---
+import { Image } from "astro:assets";
+import hjerte from "../assets/images/hjerte.svg";
+import rødhjerte from "../assets/images/rødhjerte.svg";
 ---
+
 <div>
-    <button class="border-2 border-black"><slot /></button>
+  <button
+    class="group inline-flex items-center justify-center space-x-2 px-6 py-2 rounded-xl bg-rød text-hvid hover:border-rød hover:border-2 hover:text-rød hover:bg-hvid transition-colors duration-300"
+  >
+    <span class="relative w-6 h-6">
+      <Image
+        src={hjerte}
+        alt="hjerteicon"
+        class="absolute inset-0 w-full h-full group-hover:hidden"
+      />
+      <Image
+        src={rødhjerte}
+        alt="hjerteicon red"
+        class="absolute inset-0 w-full h-full hidden group-hover:block"
+      />
+    </span>
+    <slot />
+  </button>
 </div>

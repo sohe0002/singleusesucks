@@ -19,22 +19,36 @@ import råd4 from "../assets/images/råd4.jpg";
 import råd5 from "../assets/images/råd5.jpg";
 import råd6 from "../assets/images/råd6.jpg";
 import Flaskefisk from "../components/Flaskefisk.astro";
+import råd7 from "../assets/images/råd7.jpg";
+import baggrundmbølger from "../assets/images/baggrundmbølger.jpg";
+import bølger from "../assets/images/bølger.jpg";
+import halvhval from "../assets/images/halvhval.svg";
+import plastikhjerte from "../assets/images/plastikhjerte.svg";
 ---
 
 <MainLayout title="Titel">
   <article>
     <section>
-      <h1 class="font-sigmar text-rød text-8xl">#Singleusesucks</h1>
-      <p class="font-rubik max-w-md">
+      <h1 class="font-sigmar text-9xl pb-10 pl-10">
+        #Singleuse <br />
+        <span class="text-rød">sucks</span>
+      </h1>
+      <p class="font-rubik max-w-md pb-6 pl-10">
         Plastikforurening truer vores hav og dyreliv. Millioner af tons plastik
         ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde
         i dag!
       </p>
-      <Button>Støt nu</Button>
+      <div class="pl-10 pb-10">
+        <Button
+          class="relative inline-flex items-center space-x-2 hover:text-rød"
+        >
+          <span class="font-rubik">STØT NU</span>
+        </Button>
+      </div>
     </section>
 
     <section
-      class="whitespace-nowrap overflow-x-hidden bg-lysgrå text-grå text-lg py-2"
+      class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
     >
       <div
         class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
@@ -101,7 +115,7 @@ import Flaskefisk from "../components/Flaskefisk.astro";
  -->
     <Flaskefisk />
 
-    <section>
+    <!-- <section>
       <div class="grid grid-cols-2">
         <div>
           <Image src={plastikforurening} alt="billede af plastikforurening" />
@@ -131,6 +145,40 @@ import Flaskefisk from "../components/Flaskefisk.astro";
           </p>
         </div>
       </div>
+    </section> -->
+
+    <section class="relative w-full">
+      <div>
+        <Image
+          src={bølger}
+          class="w-full h-full object-cover"
+          alt="billede af plastikforurening"
+        />
+      </div>
+
+      <div class="absolute inset-0 flex flex-col p-6 mt-24 max-w-lg left-[55%]">
+        <h2 class="font-sigmar text-hvid text-4xl pb-8">
+          Problemet med plastikforurening
+        </h2>
+        <p class="font-rubik text-hvid">
+          Plastikforurening udgør en alvorlig trussel mod miljøet, klimaet og
+          vores sundhed. Plastik findes nu overalt, og vi indtager det gennem
+          både luft og mad, men forskerne ved endnu ikke præcist, hvilke
+          konsekvenser dette har for vores helbred.
+        </p>
+        <br />
+        <p class="font-rubik text-hvid">
+          Plastikproduktionen skaber drivhusgasser hele vejen fra udvinding af
+          olie til bortskaffelse, og mikroplast forværrer klimaforandringer ved
+          at skade økosystemer som alger, der er afgørende for at reducere CO2 i
+          atmosfæren.
+        </p>
+        <br />
+        <p class="font-rubik text-hvid">
+          Samtidig udgør plastikaffald en fare for dyrelivet, hvor det kan føre
+          til kvælning, sult og kemikalieforgiftning i både havdyr og mennesker.
+        </p>
+      </div>
     </section>
 
     <section class="py-20">
@@ -138,10 +186,10 @@ import Flaskefisk from "../components/Flaskefisk.astro";
     </section>
 
     <section>
-      <h2 class="font-sigmar text-rød text-4xl pb-8 grid justify-items-center">
+      <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
         Hvordan gør vi en forskel?
       </h2>
-      <p class="font-rubik w-1/3 mx-auto pb-14">
+      <p class="font-rubik mx-96 pb-14">
         Plastic Change arbejder for at forebygge plastikforurening ved at fremme
         genbrug og cirkulære løsninger. De samarbejder med iværksættere,
         industri og politikere for at løse årsagerne til forureningen, som
@@ -231,45 +279,52 @@ import Flaskefisk from "../components/Flaskefisk.astro";
       <section id="horisontalscrollsection" class="h-[500vw]">
         <ul id="horisontalliste" class="list-none pl-0 flex sticky top-[10vh]">
           <li
-            class="pl-0 flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="pl-0 flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd1} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd1} class="w-2/3" alt="foto" />
             </figure>
           </li>
           <li
-            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd2} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd2} class="w-2/3" alt="foto" />
             </figure>
           </li>
           <li
-            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd3} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd3} class="w-2/3" alt="foto" />
             </figure>
           </li>
           <li
-            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd4} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd4} class="w-2/3" alt="foto" />
             </figure>
           </li>
           <li
-            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd5} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd5} class="w-2/3" alt="foto" />
             </figure>
           </li>
           <li
-            class="flex w-[100vw] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
           >
             <figure class="flex flex-row max-w-[800px]">
-              <Image src={råd6} class="h-[500px] w-[400px]" alt="foto" />
+              <Image src={råd6} class="w-2/3" alt="foto" />
+            </figure>
+          </li>
+          <li
+            class="flex w-[300px] items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"
+          >
+            <figure class="flex flex-row max-w-[800px]">
+              <Image src={råd7} class="w-2/3" alt="foto" />
             </figure>
           </li>
         </ul>
@@ -277,7 +332,21 @@ import Flaskefisk from "../components/Flaskefisk.astro";
     </div>
 
     <section>
-      <p class="text-4xl">Donér sektion</p>
+      <div class="bg-lysgrå flex flex-col justify-between h-full">
+        <div class="pl-12">
+          <h2 class="text-rød font-rubik font-bold pt-20 text-3xl">Støt os</h2>
+          <h3 class="text-hvid font-rubik font-bold text-4xl max-w-lg pt-4">
+            Beskyt vores verden mod plastikforurening nu!
+          </h3>
+        </div>
+        <div class="flex justify-start mt-auto">
+          <Image
+            src={plastikhjerte}
+            alt="billede af hjerte af plastikflasker"
+            style={{ marginBottom: "-130px" }}
+          />
+        </div>
+      </div>
     </section>
 
     <section
@@ -352,12 +421,40 @@ import Flaskefisk from "../components/Flaskefisk.astro";
       </div>
     </section>
 
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
+    <section>
+      <div class="grid grid-cols-2">
+        <div class="pl-20">
+          <h2 class="font-sigmar text-grøn text-4xl max-w-sm pt-32">
+            Tilmeld dig til vores nyhedsbrev
+          </h2>
+          <p class="font-rubik max-w-lg">
+            Tilmeld dig vores nyhedsbrev og få opdateringer om vores arbejde mod
+            plastikforurening, nye projekter og bæredygtige løsninger.
+          </p>
+
+          <div class="mt-8 max-w-md pb-32">
+            <div class="grid grid-cols-1 gap-6">
+              <label class="block">
+                <input
+                  type="email"
+                  class="mt-1 block w-full rounded-md border-mørkgrøn border-2 shadow-sm focus:border-grøn focus:ring focus:ring-grøn focus:ring-opacity-50 placeholder:text-mørkgrøn"
+                  placeholder="navn@mail.com"
+                />
+              </label>
+              <button
+                type="submit"
+                class="w-full py-2 px-4 bg-grøn text-white font-semibold rounded-md hover:bg-mørkgrøn transition-colors duration-300"
+              >
+                Tilmeld
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pt-20">
+          <Image src={halvhval} alt="billede af en halv hval" />
+        </div>
+      </div>
+    </section>
   </article>
 
   <script>
