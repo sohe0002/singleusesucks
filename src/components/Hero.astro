@@ -6,8 +6,8 @@ import { Image } from "astro:assets";
 import knustFlaske from "../assets/images/knust_flaske.png";
 ---
 
-<section class="relative overflow-hidden pb-[160px]">
-  <h1 class="font-sigmar text-9xl pb-10 pl-10 lg:ml-28 lg:mt-28">
+<section class="relative overflow-hidden pb-[6%]">
+  <h1 class="font-sigmar text-8xl pb-10 pl-10 lg:ml-28 lg:mt-16">
     #Singleuse <br />
     <span class="text-rød">sucks</span>
   </h1>
@@ -16,7 +16,7 @@ import knustFlaske from "../assets/images/knust_flaske.png";
     ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde i
     dag!
   </p>
-  <div class="pl-10 pb-10 lg:ml-28">
+  <div class="pl-10 pb-20 lg:ml-28">
     <Button class="relative inline-flex items-center space-x-2 hover:text-rød">
       <span class="font-rubik">STØT NU</span>
     </Button>
@@ -41,7 +41,7 @@ import knustFlaske from "../assets/images/knust_flaske.png";
       flaske.classList.add("flaske", "absolute", "opacity-80");
 
       // Sæt flaskens størrelse
-      flaske.style.width = "170px"; // Juster denne værdi som ønsket
+      flaske.style.width = "130px"; // Juster denne værdi som ønsket
       flaske.style.height = "auto"; // Bevar proportioner
 
       // Start flaskerne lidt udenfor toppen af skærmen
@@ -90,9 +90,9 @@ import knustFlaske from "../assets/images/knust_flaske.png";
         }
 
         // Når flasken rammer bunden (600 pixels fra toppen)
-        if (fallDistance >= 600) {
+        if (fallDistance >= 450) {
           flaske.classList.add("bund-position"); // Stop animation
-          flaske.style.top = `600px`; // Sætter flasken til at være 600 pixels fra toppen
+          flaske.style.top = `450px`; // Sætter flasken til at være 600 pixels fra toppen
 
           // Tilfældig placering i bunken
           flaske.style.left =
