@@ -37,10 +37,11 @@ import plastikpose from "../assets/images/plastikpose.png";
 import kop from "../assets/images/kop.png";
 import tshirt from "../assets/images/tshirt.png";
 import bgmerch from "../assets/images/bgmerch.jpg";
+import Mobile from "../components/mobile.astro";
 ---
 
 <MainLayout title="Titel">
-  <article>
+  <article class="large-screen">
     <!--     <section>
       <h1 class="font-sigmar text-9xl pb-10 pl-10">
         #Singleuse <br />
@@ -305,7 +306,7 @@ import bgmerch from "../assets/images/bgmerch.jpg";
         />
       </div>
     </section>
-    ¨
+     ¨
     <section class="relative z-20">
       <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
         Hvordan gør vi en forskel?
@@ -390,12 +391,12 @@ import bgmerch from "../assets/images/bgmerch.jpg";
             plastik og undgå engangsprodukter, selvom det kan være en
             udfordring. <br />
             <br />
-            Derudover kan du skabe forandring ved at tale om plastikforurening med
-            din omgangskreds, dele viden og inspirere andre til at være opmærksomme
-            på problemet.
+             Derudover kan du skabe forandring ved at tale om plastikforurening
+            med din omgangskreds, dele viden og inspirere andre til at være
+            opmærksomme på problemet.
             <br />
             <br />
-            Vores 7 råd:
+             Vores 7 råd:
           </p>
         </li>
         <li
@@ -591,10 +592,10 @@ import bgmerch from "../assets/images/bgmerch.jpg";
                 blæsende dag er havet noget helt særligt. <br /><br />En
                 vinterdag ved Vesterhavet, i læ af kystfiskernes lyseblå
                 kuttere, opstod ideen til at søsætte Hjemhavn. <br /><br />Havet
-                er vores inspirationskilde og vigtigste medarbejder. <br /> Derfor
-                har vi siden 2018 doneret 5% af vores omsætningen til havet.  <br
-                /><br /> Vi støtter projekter, der ønsker at gøre noget godt for
-                havet.” <br /><br /> - Hjemhavn
+                er vores inspirationskilde og vigtigste medarbejder. <br />
+                 Derfor har vi siden 2018 doneret 5% af vores omsætningen til
+                havet.  <br /><br /> Vi støtter projekter, der ønsker at gøre
+                noget godt for havet.” <br /><br /> - Hjemhavn
               </p>
             </div>
             <div class="flex flex-col items-center -mt-36">
@@ -623,8 +624,8 @@ import bgmerch from "../assets/images/bgmerch.jpg";
                 <p class="text-rød font-rubik text-5xl font-bold">TEE</p>
                 <p class="text-rød font-rubik text-5xl font-bold">329,-</p>
                 <p class="font-rubik text-hvid">
-                  Lækker kraftig t-shirt i 100% økokologisk bomuld. <br /> Fået i
-                  marine og grå.
+                  Lækker kraftig t-shirt i 100% økokologisk bomuld. <br /> Fået
+                  i marine og grå.
                 </p>
                 <p>Knap</p>
               </div>
@@ -669,7 +670,10 @@ import bgmerch from "../assets/images/bgmerch.jpg";
     </section>
 
     <section>
-      <div class="grid grid-cols-2">
+      <div class="absolute z-10">
+        <Image src={bgBillede} class="w-full pb-1" alt="Baggrunds bølger" />
+      </div>
+      <div class="grid grid-cols-2 relative z-20">
         <div class="pl-48">
           <h2 class="font-sigmar text-grøn text-4xl max-w-sm pt-32 pb-4">
             Tilmeld dig til vores nyhedsbrev
@@ -760,4 +764,26 @@ import bgmerch from "../assets/images/bgmerch.jpg";
       }
     }
   </script>
+
+  <Mobile class="small-screen" />
 </MainLayout>
+<style>
+  .small-screen {
+    display: none; /* Skjul på store skærme */
+  }
+
+  .large-screen {
+    display: block; /* Vis som standard */
+  }
+
+  /* Medieforespørgsel til små skærme */
+  @media (max-width: 768px) {
+    .small-screen {
+      display: block; /* Vis for små skærme */
+    }
+
+    .large-screen {
+      display: none; /* Skjul på små skærme */
+    }
+  }
+</style>

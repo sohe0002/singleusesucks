@@ -1,0 +1,152 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import plastikflaskemfisk from "../assets/images/plastikflaskemfisk.svg";
+import billede4 from "../assets/images/billede4.jpg";
+import storfisk from "../assets/images/stor_fisk.png";
+import bgBillede from "../assets/images/bg_billede.svg";
+---
+
+<section>
+  <h1 class="font-sigmar text-6xl pb-10 pl-10">
+    #Singleuse <br />
+    <span class="text-rød">sucks</span>
+  </h1>
+  <p class="font-rubik max-w-md pb-6 pl-10">
+    Plastikforurening truer vores hav og dyreliv. Millioner af tons plastik
+    ender i oceanerne hvert år. Sammen kan vi stoppe det. Støt vores arbejde i
+    dag!
+  </p>
+  <div class="pl-10 pb-10">
+    <Button class="relative inline-flex items-center space-x-2 hover:text-rød">
+      <span class="font-rubik">STØT NU</span>
+    </Button>
+  </div>
+</section>
+<section
+  class="whitespace-nowrap overflow-x-hidden bg-rød text-hvid text-lg py-2"
+>
+  <div
+    class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+  >
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+  </div>
+  <div
+    class="inline-block animate-infinite-scroll whitespace-nowrap [&_span]:mx-6"
+    aria-hidden="true"
+  >
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+    <span>MAKE A CHANGE</span>
+  </div>
+</section>
+<section>
+  <h2
+    class="font-sigmar text-4xl text-rød pt-20 pb-8 grid justify-items-center"
+  >
+    Hvad er plastikforurening?
+  </h2>
+  <div class="">
+    <div class="pt-10">
+      <p class="font-rubik pb-10">
+        Plastikforurening opstår, når plastikaffald ender i naturen, især
+        havene, hvor det truer dyrelivet og bliver til mikroplast, som spreder
+        sig i økosystemet.
+      </p>
+
+      <p class="font-rubik pb-10">
+        Plastikken nedbrydes ikke naturligt og kan skade både dyr og mennesker
+        ved at ophobe toksiner.
+      </p>
+
+      <p class="font-rubik pb-10">
+        Dette globale problem har alvorlige konsekvenser for havets økosystemer
+        og menneskers sundhed, da mikroplast kan ende i fødekæden og forurene
+        vores mad og vand.
+      </p>
+    </div>
+    <div>
+      <Image
+        src={plastikflaskemfisk}
+        alt="billede af en plastikflaske"
+        class="-rotate-90 w-2/5"
+      />
+    </div>
+  </div>
+</section>
+<section>
+  <div class="bg-grøn">
+    <div class="py-12">
+      <h2 class="font-sigmar text-hvid text-4xl pb-8">
+        Problemet med plastikforurening
+      </h2>
+      <p class="font-rubik text-hvid">
+        Plastikforurening udgør en alvorlig trussel mod miljøet, klimaet og
+        vores sundhed. Plastik findes nu overalt, og vi indtager det gennem både
+        luft og mad, men forskerne ved endnu ikke præcist, hvilke konsekvenser
+        dette har for vores helbred.
+      </p>
+      <br />
+      <p class="font-rubik text-hvid">
+        Plastikproduktionen skaber drivhusgasser hele vejen fra udvinding af
+        olie til bortskaffelse, og mikroplast forværrer klimaforandringer ved at
+        skade økosystemer som alger, der er afgørende for at reducere CO2 i
+        atmosfæren.
+      </p>
+      <br />
+      <p class="font-rubik text-hvid">
+        Samtidig udgør plastikaffald en fare for dyrelivet, hvor det kan føre
+        til kvælning, sult og kemikalieforgiftning i både havdyr og mennesker.
+      </p>
+    </div>
+    <div>
+      <Image
+        src={billede4}
+        class="w-full h-full object-cover"
+        alt="billede af plastikforurening"
+      />
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="absolute z-10">
+    <Image src={bgBillede} class="w-full" alt="Bølger som svg" />
+  </div>
+  <div class="relative z-20">
+    <!-- Delfin -->
+    <div class="relative flex flex-col items-center">
+      <div class="relative">
+        <Image src={storfisk} class="h-full px-16" alt="Delfin" />
+      </div>
+    </div>
+  </div>
+  {/* Tekst over delfinen */}
+  <div class="absolute right-[80px] top-[20px] flex items-center">
+    <h1 class="text-red-500 text-6xl font-bold">8</h1>
+    <div class="text-black text-sm">
+      <p class="font-bold">millioner tons plastikaffald</p>
+      <p>
+        flyder rundt i verdenshavene <span class="text-[10px] mb-12">2</span>
+      </p>
+    </div>
+  </div>
+</section>
