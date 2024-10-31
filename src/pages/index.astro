@@ -332,9 +332,9 @@ import "motion";
                 mindre plastik og undgå engangsprodukter, selvom det kan være en
                 udfordring. <br />
                 <br />
-                 Derudover kan du skabe forandring ved at tale om
-                plastikforurening med din omgangskreds, dele viden og inspirere
-                andre til at være opmærksomme på problemet.
+                Derudover kan du skabe forandring ved at tale om plastikforurening
+                med din omgangskreds, dele viden og inspirere andre til at være opmærksomme
+                på problemet.
                 <br />
                 <br />
                 <span class="font-bold text-rød"> Vores 7 råd:</span>
@@ -570,8 +570,7 @@ import "motion";
                 vinterdag ved Vesterhavet, i læ af kystfiskernes lyseblå
                 kuttere, opstod ideen til at søsætte Hjemhavn. <br /><br />Havet
                 er vores inspirationskilde og vigtigste medarbejder. <br />
-                 Derfor har vi siden 2018 doneret 5% af vores omsætningen til
-                havet. 
+                Derfor har vi siden 2018 doneret 5% af vores omsætningen til havet. 
                 <br /><br /> Vi støtter projekter, der ønsker at gøre noget godt
                 for havet.” <br /><br />- Hjemhavn
               </p>
@@ -635,7 +634,7 @@ import "motion";
                 </p>
                 <p class="font-rubik absolute top-[480px] text-white">
                   Lækker kraftig t-shirt i 100% økokologisk bomuld. <br />
-                   Fået i marine og grå.
+                  Fået i marine og grå.
                 </p>
                 <a
                   href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex"
@@ -758,7 +757,7 @@ import "motion";
 
     scroll(
       animate("#horisontalliste", {
-        transform: ["none", "translateX(-80vw)"], // Juster til -100vw for at rulle et fuldt viewport-bredde
+        transform: ["none", "translateX(-100vw)"], // Juster til -100vw for at rulle et fuldt viewport-bredde
       }),
       { target: document.querySelector("#horisontalscrollsection") }
     );
@@ -834,53 +833,53 @@ import "motion";
   </script>
   <script is:inline src="/tobii.min.js"></script>
   <script defer>
-  const tobii = new Tobii();
+    const tobii = new Tobii();
 
-  // Generel funktion til at håndtere elementets bevægelse
-  function handleMouseMove(e, hoverBox) {
-    const boxRect = hoverBox.getBoundingClientRect();
-    const offsetX = e.clientX - boxRect.left;
-    const offsetY = e.clientY - boxRect.top;
+    // Generel funktion til at håndtere elementets bevægelse
+    function handleMouseMove(e, hoverBox) {
+      const boxRect = hoverBox.getBoundingClientRect();
+      const offsetX = e.clientX - boxRect.left;
+      const offsetY = e.clientY - boxRect.top;
 
-    // Bestem, hvor meget elementet skal flytte sig
-    const moveDistance = 100; // Flyt 50px væk fra cursoren
+      // Bestem, hvor meget elementet skal flytte sig
+      const moveDistance = 100; // Flyt 50px væk fra cursoren
 
-    // Beregn ny position, flytter væk fra midten
-    const newX = offsetX > boxRect.width / 2 ? -moveDistance : moveDistance;
-    const newY = offsetY > boxRect.height / 2 ? -moveDistance : moveDistance;
+      // Beregn ny position, flytter væk fra midten
+      const newX = offsetX > boxRect.width / 2 ? -moveDistance : moveDistance;
+      const newY = offsetY > boxRect.height / 2 ? -moveDistance : moveDistance;
 
-    // Flyt elementet
-    hoverBox.style.transform = `translate(${newX}px, ${newY}px)`;
-  }
-
-  // Tilføj bevægelseshåndtering til et element
-  function addHoverEffect(hoverBox) {
-    hoverBox.addEventListener("mousemove", (e) =>
-      handleMouseMove(e, hoverBox)
-    );
-
-    // Reset position ved mouseleave
-    hoverBox.addEventListener("mouseleave", () => {
-      hoverBox.style.transform = "translate(0, 0)";
-    });
-  }
-
-  // Hent alle de elementer, der skal have denne hover-effekt
-  const hoverBoxes = [
-    document.getElementById("hoverBox2"),
-    document.getElementById("hoverBox3"),
-    document.getElementById("hoverBox4"),
-    document.getElementById("hoverBox5"),
-    document.getElementById("hoverBox6"),
-    document.getElementById("hoverBox7"),
-  ];
-
-  // Tilføj hover-effekt til alle elementerne
-  hoverBoxes.forEach((hoverBox) => {
-    if (hoverBox) {
-      addHoverEffect(hoverBox);
+      // Flyt elementet
+      hoverBox.style.transform = `translate(${newX}px, ${newY}px)`;
     }
-  });
+
+    // Tilføj bevægelseshåndtering til et element
+    function addHoverEffect(hoverBox) {
+      hoverBox.addEventListener("mousemove", (e) =>
+        handleMouseMove(e, hoverBox)
+      );
+
+      // Reset position ved mouseleave
+      hoverBox.addEventListener("mouseleave", () => {
+        hoverBox.style.transform = "translate(0, 0)";
+      });
+    }
+
+    // Hent alle de elementer, der skal have denne hover-effekt
+    const hoverBoxes = [
+      document.getElementById("hoverBox2"),
+      document.getElementById("hoverBox3"),
+      document.getElementById("hoverBox4"),
+      document.getElementById("hoverBox5"),
+      document.getElementById("hoverBox6"),
+      document.getElementById("hoverBox7"),
+    ];
+
+    // Tilføj hover-effekt til alle elementerne
+    hoverBoxes.forEach((hoverBox) => {
+      if (hoverBox) {
+        addHoverEffect(hoverBox);
+      }
+    });
   </script>
 
   <style>
