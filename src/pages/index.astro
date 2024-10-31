@@ -38,6 +38,8 @@ import kop from "../assets/images/kop.png";
 import tshirt from "../assets/images/tshirt.png";
 import bgmerch from "../assets/images/bgmerch.jpg";
 import Mobile from "../components/mobile.astro";
+
+import "motion";
 ---
 
 <MainLayout title="Titel">
@@ -216,11 +218,14 @@ import Mobile from "../components/mobile.astro";
             />
           </div>
         </div>
-        <Image
-          src={plastikpose}
-          class="absolute top-[120px] right-[200px] w-[200px]"
-          alt="Skildpadde"
-        />
+        <div
+          id="hoverBox4"
+          class="transition-transform duration-300 ease-in-out"
+        >
+          <a href="over-out-icm.jpeg" class="lightbox">
+            <Image src={plastikpose} alt="" class="my-0" />
+          </a>
+        </div>
 
         <Image
           src={horsk}
@@ -250,7 +255,9 @@ import Mobile from "../components/mobile.astro";
         />
 
         {/* Tekst over delfinen */}
-        <div class="absolute top-[680px] flex items-center">
+        <div
+          class="fade-in-element absolute top-[680px] flex items-center animate__animated"
+        >
           <h1 class="text-red-500 text-6xl font-bold">8</h1>
           <div class="text-black text-sm">
             <p class="font-bold">millioner tons plastikaffald</p>
@@ -263,7 +270,9 @@ import Mobile from "../components/mobile.astro";
         </div>
 
         <!-- Olieforbrug -->
-        <div class="absolute top-[380px] left-[500px] flex items-center">
+        <div
+          class="fade-in-element absolute top-[380px] left-[500px] flex items-center animate__animated"
+        >
           <h1 class="text-red-500 text-6xl font-bold">438</h1>
           <div>
             <h2 class="font-bold">millioner tons olie</h2>
@@ -272,7 +281,9 @@ import Mobile from "../components/mobile.astro";
         </div>
 
         <!-- Emballageaffald -->
-        <div class="absolute top-[880px] left-[270px] flex items-center">
+        <div
+          class="fade-in-element absolute top-[880px] left-[270px] flex items-center animate__animated"
+        >
           <h1 class="text-red-500 text-6xl font-bold">38,7</h1>
           <div>
             <h2 class="font-bold">kilo emballage</h2>
@@ -284,7 +295,9 @@ import Mobile from "../components/mobile.astro";
         </div>
 
         <!-- Havpattedyrs død -->
-        <div class="absolute top-[1100px] left-[70px] flex items-center">
+        <div
+          class="fade-in-element absolute top-[1100px] left-[70px] flex items-center animate__animated"
+        >
           <h1 class="text-red-500 text-6xl font-bold">100</h1>
           <div>
             <h2 class="font-bold">tusinde havpattedyr</h2>
@@ -306,7 +319,7 @@ import Mobile from "../components/mobile.astro";
         />
       </div>
     </section>
-     ¨
+    ¨
     <section class="relative z-20">
       <h2 class="font-sigmar text-rød text-4xl pb-8 mx-96">
         Hvordan gør vi en forskel?
@@ -391,12 +404,12 @@ import Mobile from "../components/mobile.astro";
             plastik og undgå engangsprodukter, selvom det kan være en
             udfordring. <br />
             <br />
-             Derudover kan du skabe forandring ved at tale om plastikforurening
-            med din omgangskreds, dele viden og inspirere andre til at være
-            opmærksomme på problemet.
+            Derudover kan du skabe forandring ved at tale om plastikforurening med
+            din omgangskreds, dele viden og inspirere andre til at være opmærksomme
+            på problemet.
             <br />
             <br />
-             Vores 7 råd:
+            Vores 7 råd:
           </p>
         </li>
         <li
@@ -593,9 +606,9 @@ import Mobile from "../components/mobile.astro";
                 vinterdag ved Vesterhavet, i læ af kystfiskernes lyseblå
                 kuttere, opstod ideen til at søsætte Hjemhavn. <br /><br />Havet
                 er vores inspirationskilde og vigtigste medarbejder. <br />
-                 Derfor har vi siden 2018 doneret 5% af vores omsætningen til
-                havet.  <br /><br /> Vi støtter projekter, der ønsker at gøre
-                noget godt for havet.” <br /><br /> - Hjemhavn
+                Derfor har vi siden 2018 doneret 5% af vores omsætningen til havet. 
+                <br /><br /> Vi støtter projekter, der ønsker at gøre noget godt
+                for havet.” <br /><br /> - Hjemhavn
               </p>
             </div>
             <div class="flex flex-col items-center -mt-36">
@@ -624,8 +637,8 @@ import Mobile from "../components/mobile.astro";
                 <p class="text-rød font-rubik text-5xl font-bold">TEE</p>
                 <p class="text-rød font-rubik text-5xl font-bold">329,-</p>
                 <p class="font-rubik text-hvid">
-                  Lækker kraftig t-shirt i 100% økokologisk bomuld. <br /> Fået
-                  i marine og grå.
+                  Lækker kraftig t-shirt i 100% økokologisk bomuld. <br /> Fået i
+                  marine og grå.
                 </p>
                 <p>Knap</p>
               </div>
@@ -765,7 +778,9 @@ import Mobile from "../components/mobile.astro";
     }
   </script>
 
-  <Mobile class="small-screen" />
+  <div class="small-screen">
+    <Mobile />
+  </div>
 </MainLayout>
 <style>
   .small-screen {
@@ -787,3 +802,79 @@ import Mobile from "../components/mobile.astro";
     }
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".fade-in-element");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("animate__fadeInLeft")) {
+              entry.target.classList.add("animate__fadeInLeft");
+            } else {
+              entry.target.classList.add("animate__fadeInRight");
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+  });
+</script>
+<script is:inline src="/tobii.min.js"></script>
+<script defer>
+  const tobii = new Tobii();
+
+  // Generel funktion til at håndtere elementets bevægelse
+  function handleMouseMove(e, hoverBox) {
+    const boxRect = hoverBox.getBoundingClientRect();
+    const offsetX = e.clientX - boxRect.left;
+    const offsetY = e.clientY - boxRect.top;
+
+    // Bestem, hvor meget elementet skal flytte sig
+    const moveDistance = 100; // Flyt 50px væk fra cursoren
+
+    // Beregn ny position, flytter væk fra midten
+    const newX = offsetX > boxRect.width / 2 ? -moveDistance : moveDistance;
+    const newY = offsetY > boxRect.height / 2 ? -moveDistance : moveDistance;
+
+    // Flyt elementet
+    hoverBox.style.transform = `translate(${newX}px, ${newY}px)`;
+  }
+
+  // Tilføj bevægelseshåndtering til et element
+  function addHoverEffect(hoverBox) {
+    hoverBox.addEventListener("mousemove", (e) => handleMouseMove(e, hoverBox));
+
+    // Reset position ved mouseleave
+    hoverBox.addEventListener("mouseleave", () => {
+      hoverBox.style.transform = "translate(0, 0)";
+    });
+  }
+
+  // Hent alle de elementer, der skal have denne hover-effekt
+  const hoverBoxes = [
+    document.getElementById("hoverBox2"),
+    document.getElementById("hoverBox3"),
+    document.getElementById("hoverBox4"),
+    document.getElementById("hoverBox5"),
+    document.getElementById("hoverBox6"),
+    document.getElementById("hoverBox7"),
+  ];
+
+  // Tilføj hover-effekt til alle elementerne
+  hoverBoxes.forEach((hoverBox) => {
+    if (hoverBox) {
+      addHoverEffect(hoverBox);
+    }
+  });
+</script>
