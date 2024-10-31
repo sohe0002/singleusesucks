@@ -46,7 +46,7 @@ import bg_billede from "../assets/images/bg_billede.svg";
       <Image
         src={fisk}
         alt=""
-        class="col-start-10 parallaxgrafik1 absolute z-5 left-[30%] size-80"
+        class="col-start-10 parallaxgrafik1 absolute z-5 left-[27%] size-80"
       />
     </div>
   </div>
@@ -54,7 +54,7 @@ import bg_billede from "../assets/images/bg_billede.svg";
     <Image
       src={bg_billede}
       alt=""
-      class="absolute top-[60%] z-0 w-[1000px] h-auto overflow-hidden max-w-full lg:right-[2%] lg:w-[3800px] lg:rotate-90 lg:mt-52"
+      class="absolute top-[60%] z-0 w-full h-auto lg:right-[2%] lg:w-[3800px] lg:rotate-90 lg:mt-52"
     />
   </div>
 </section>
@@ -63,7 +63,7 @@ import bg_billede from "../assets/images/bg_billede.svg";
   import { animate, scroll } from "motion";
 
   /* Parallaxgrafik */
-  scroll(animate(".parallaxgrafik1", { y: [400, -2200] }), {
+  scroll(animate(".parallaxgrafik1", { y: [400, -1900] }), {
     target: document.querySelector(".parallaxgrafik"),
     offset: ["start end", "end start"],
   });

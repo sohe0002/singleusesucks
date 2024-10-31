@@ -32,7 +32,7 @@ import knustFlaske from "../assets/images/knust_flaske.png";
     const flaskerContainer = document.querySelector(".flasker-container");
     if (!flaskerContainer) return;
 
-    const antalFlasker = 40; // Antal flasker der skal falde
+    const antalFlasker = 60; // Antal flasker der skal falde
     function createFallingFlask() {
       // Opret et nyt img-element for flasken
       const flaske = document.createElement("img");
@@ -56,8 +56,8 @@ import knustFlaske from "../assets/images/knust_flaske.png";
       flaskerContainer.appendChild(flaske);
 
       // Tilfældig faldhastighed og forsinkelse
-      const fallSpeed = 0.1 + Math.random() * 0.2; // hastighed mellem 0.1 og 0.3
-      const delay = Math.random() * 3000; // Forsinkelse op til 3 sekunder
+      const fallSpeed = 0.1 + Math.random() * 0.1; // hastighed mellem 0.1 og 0.3
+      const delay = Math.random() * 1000; // Forsinkelse op til 3 sekunder
       const rotationSpeed = (Math.random() - 0.5) * 0.1; // Rotation mellem -0.05 og 0.05 pr. frame
 
       // Start animationen for faldet
@@ -90,9 +90,9 @@ import knustFlaske from "../assets/images/knust_flaske.png";
         }
 
         // Når flasken rammer bunden (600 pixels fra toppen)
-        if (fallDistance >= 450) {
+        if (fallDistance >= 500) {
           flaske.classList.add("bund-position"); // Stop animation
-          flaske.style.top = `450px`; // Sætter flasken til at være 600 pixels fra toppen
+          flaske.style.top = `500px`; // Sætter flasken til at være 600 pixels fra toppen
 
           // Tilfældig placering i bunken
           flaske.style.left =
@@ -108,7 +108,7 @@ import knustFlaske from "../assets/images/knust_flaske.png";
 
     // Opret flasker løbende
     for (let i = 0; i < antalFlasker; i++) {
-      setTimeout(createFallingFlask, i * 500); // Tilføj en ny flaske hvert 0,5 sekund
+      setTimeout(createFallingFlask, i * 200); // Tilføj en ny flaske hvert 0,5 sekund
     }
   });
 </script>

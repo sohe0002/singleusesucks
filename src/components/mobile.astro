@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
-import plastikflaskemfisk from "../assets/images/plastikflaskemfisk.svg";
+import plastikflaskemfisk from "../assets/images/smallflaske.jpg";
 import billede1 from "../assets/images/billede1.jpg";
 import billede2 from "../assets/images/billede2.jpg";
 import billede3 from "../assets/images/billede3.jpg";
@@ -105,7 +105,7 @@ import halvhval from "../assets/images/halvhval.svg";
         <Image
           src={plastikflaskemfisk}
           alt="billede af en plastikflaske"
-          class="-rotate-90 w-2/5"
+          class="mx-auto"
         />
       </div>
     </div>
@@ -162,40 +162,48 @@ import halvhval from "../assets/images/halvhval.svg";
       </div>
     </div>
     {/* Tekst over delfinen */}
-    <div class="absolute top-[2800px] left-[10px] flex items-center z-30">
+    <div class="absolute top-[2450px] left-[10px] flex items-center z-30">
       <h1 class="text-red-500 text-6xl font-bold">8</h1>
       <div class="text-black text-sm">
-        <p class="font-bold">millioner tons plastikaffald</p>
-        <p>
+        <p class="font-bold text-rød">millioner tons plastikaffald</p>
+        <p class="text-rød">
           flyder rundt i verdenshavene <span class="text-[10px] mb-12">2</span>
         </p>
       </div>
     </div>
     <!-- Olieforbrug -->
-    <div class="absolute right-[10px] top-[2400px] flex items-center z-30">
+    <div class="absolute right-[20px] top-[2200px] flex items-center z-30">
       <h1 class="text-red-500 text-5xl font-bold">438</h1>
       <div>
-        <h2 class="font-bold">millioner tons olie</h2>
-        <p>bruges årligt til plastikproduktion</p>
+        <h2 class="font-bold text-rød">millioner tons olie</h2>
+        <p class="text-rød">
+          bruges årligt til plastikproduktion <span class="text-[10px] mb-12"
+            >1</span
+          >
+        </p>
       </div>
     </div>
     <!-- Emballageaffald -->
-    <div class="absolute top-[3180px] left-[150px] flex items-center z-30">
+    <div class="absolute top-[2600px] left-[150px] flex items-center z-30">
       <h1 class="text-red-500 text-5xl font-bold">38,7</h1>
       <div>
-        <h2 class="font-bold pt-8">kilo emballage</h2>
-        <p>
+        <h2 class="font-bold pt-8 text-rød">kilo emballage</h2>
+        <p class="text-rød">
           bruges årligt af en gennemsnitlig dansker, og forbruget er fortsat
-          stigende
+          stigende <span class="text-[10px] mb-12">3</span>
         </p>
       </div>
     </div>
     <!-- Havpattedyrs død -->
-    <div class="absolute top-[3400px] left-[70px] flex items-center">
+    <div class="absolute top-[2900px] left-[40px] flex items-center">
       <h1 class="text-red-500 text-5xl font-bold">100</h1>
       <div>
-        <h2 class="font-bold">tusinde havpattedyr</h2>
-        <p>dør hvert år på grund af plastik i havet ifølge FN</p>
+        <h2 class="font-bold text-rød">tusinde havpattedyr</h2>
+        <p class="text-rød">
+          dør hvert år på grund af plastik i havet ifølge FN <span
+            class="text-[10px] mb-12">4</span
+          >
+        </p>
       </div>
     </div>
     <section>
@@ -209,17 +217,17 @@ import halvhval from "../assets/images/halvhval.svg";
       <div class="flex justify-center relative z-20">
         <Image
           src={datafisk}
-          class="w-3/2 pt-32"
+          class="w-3/2 pt-20"
           alt="billede af plastikforurening"
         />
       </div>
     </section>
   </section>
   <section id="rolle">
-    <h2 class="font-sigmar text-rød text-4xl p-10">
+    <h2 class="font-sigmar text-rød text-4xl px-10 pb-5">
       Hvordan gør vi en forskel?
     </h2>
-    <p class="font-rubik p-10">
+    <p class="font-rubik px-10 pb-10">
       Plastic Change arbejder for at forebygge plastikforurening ved at fremme
       genbrug og cirkulære løsninger. De samarbejder med iværksættere, industri
       og politikere for at løse årsagerne til forureningen, som overproduktion
@@ -296,7 +304,7 @@ import halvhval from "../assets/images/halvhval.svg";
         på problemet.
         <br />
         <br />
-         Vores 7 råd:
+        <span class="font-bold text-rød">Vores 7 råd:</span>
       </p>
     </div>
     <div class="grid grid-cols-2 gap-10 justify-items-center pt-12 pl-[90px]">
