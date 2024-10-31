@@ -26,8 +26,6 @@ import knustFlaske from "../assets/images/knust_flaske.png";
 </section>
 
 <script>
-  import knustFlaske from "../assets/images/knust_flaske.png";
-
   document.addEventListener("DOMContentLoaded", () => {
     const flaskerContainer = document.querySelector(".flasker-container");
     if (!flaskerContainer) return;
@@ -36,7 +34,7 @@ import knustFlaske from "../assets/images/knust_flaske.png";
     function createFallingFlask() {
       // Opret et nyt img-element for flasken
       const flaske = document.createElement("img");
-      flaske.src = knustFlaske;
+      flaske.src = "/knust_flaske.png";
       flaske.alt = "Knust flaske";
       flaske.classList.add("flaske", "absolute", "opacity-80");
 
