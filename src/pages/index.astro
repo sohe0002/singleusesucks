@@ -542,7 +542,7 @@ import "motion";
       </section>
     </section>
 
-    <section>
+    <section id="merch">
       <div
         class="sticky top-0 left-0 right-0 bottom-0 h-screen w-full bg-lysgrøn bg-center"
       >
@@ -585,7 +585,11 @@ import "motion";
         >
           <div class="">
             <div class="relative">
-              <Image src={kop} class="w-96" alt="billede af en kop" />
+              <a
+                href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/emaljekrus-plastic-change-bla-kant"
+              >
+                <Image src={kop} class="w-96" alt="billede af en kop" />
+              </a>
               <p
                 class="absolute top-[158px] left-10 text-rød font-rubik text-5xl font-bold"
               >
@@ -599,14 +603,26 @@ import "motion";
               <p class="font-rubik absolute text-hvid top-[470px]">
                 Klassisk hvidt emaljekrus med blå kant.
               </p>
-              <button
-                class="absolute top-[500px] right-[657px] px-6 py-2 rounded bg-rød text-hvid border-rød border-2 hover:border-rød hover:border-2 hover:text-rød hover:bg-hvid"
-                >KØB NU
-              </button>
+              <a
+                href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/emaljekrus-plastic-change-bla-kant"
+              >
+                <button
+                  class="absolute top-[500px] right-[657px] px-6 py-2 rounded bg-rød text-hvid border-rød border-2 hover:border-rød hover:border-2 hover:text-rød hover:bg-hvid"
+                  >KØB NU
+                </button></a
+              >
             </div>
             <div class="">
               <div class="relative">
-                <Image src={tshirt} class="w-96" alt="billede af en tshirt" />
+                <a
+                  href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex"
+                >
+                  <Image
+                    src={tshirt}
+                    class="w-96"
+                    alt="billede af en tshirt"
+                  /></a
+                >
                 <p
                   class="text-rød absolute top-[100px] left-10 font-rubik text-5xl font-bold"
                 >
@@ -621,10 +637,14 @@ import "motion";
                   Lækker kraftig t-shirt i 100% økokologisk bomuld. <br />
                    Fået i marine og grå.
                 </p>
-                <button
-                  class="absolute top-[530px] right-[657px] px-6 py-2 rounded bg-rød text-hvid border-rød border-2 hover:border-rød hover:border-2 hover:text-rød hover:bg-hvid"
-                  >KØB NU
-                </button>
+                <a
+                  href="https://www.hjemhavn.dk/collections/plastic-change-merchandise/products/tee-plastic-change-men-unisex"
+                >
+                  <button
+                    class="absolute top-[530px] right-[657px] px-6 py-2 rounded bg-rød text-hvid border-rød border-2 hover:border-rød hover:border-2 hover:text-rød hover:bg-hvid"
+                    >KØB NU
+                  </button></a
+                >
               </div>
             </div>
           </div>
@@ -851,16 +871,16 @@ import "motion";
     document.getElementById("hoverBox3"),
     document.getElementById("hoverBox4"),
     document.getElementById("hoverBox5"),
-        document.getElementById("hoverBox6"),
-      document.getElementById("hoverBox7"),
-    ];
+    document.getElementById("hoverBox6"),
+    document.getElementById("hoverBox7"),
+  ];
 
-    // Tilføj hover-effekt til alle elementerne
-    hoverBoxes.forEach((hoverBox) => {
-      if (hoverBox) {
-        addHoverEffect(hoverBox);
-      }
-    });
+  // Tilføj hover-effekt til alle elementerne
+  hoverBoxes.forEach((hoverBox) => {
+    if (hoverBox) {
+      addHoverEffect(hoverBox);
+    }
+  });
   </script>
 
   <style>
