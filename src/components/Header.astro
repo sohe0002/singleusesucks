@@ -13,14 +13,18 @@ import Button from "./Button.astro";
       <!-- Desktop menu -->
       <nav id="desktopmenu" class="hidden lg:block">
         <ul class="flex flex-row gap-6 text-black items-center">
-          <li><Link href="/" class="p-1">PLASTIKFORUDRENING</Link></li>
-          <li><Link href="/">VORES ROLLE</Link></li>
-          <li><Link href="/">BIDRAG</Link></li>
-          <li><Link href="/">MERCH</Link></li>
+          <li>
+            <Link href="#plastikforudrening" class="p-1">
+              PLASTIKFORUDRENING
+            </Link>
+          </li>
+          <li><Link href="#rolle">VORES ROLLE</Link></li>
+          <li><Link href="#bidrag">BIDRAG</Link></li>
+          <li><Link href="#merch">MERCH</Link></li>
 
           <li>
             <Button>
-              <Link href="/">Støt</Link>
+              <Link href="#stot">Støt</Link>
             </Button>
           </li>
         </ul>
@@ -52,10 +56,19 @@ import Button from "./Button.astro";
           </svg>
         </button>
         <ul class="flex flex-col gap-6 text-center text-[#E52622] open-sans">
-          <li><Link href="/" class="p-1">PLASTIKFORUDRENING</Link></li>
-          <li><Link href="/">VORES ROLLE</Link></li>
-          <li><Link href="/">BIDRAG</Link></li>
-          <li><Link href="/">MERCH</Link></li>
+          <li>
+            <Link href="#plastikforudrening" class="p-1">
+              PLASTIKFORUDRENING
+            </Link>
+          </li>
+          <li><Link href="#rolle">VORES ROLLE</Link></li>
+          <li><Link href="bidrag">BIDRAG</Link></li>
+          <li><Link href="#merch">MERCH</Link></li>
+          <li>
+            <Button>
+              <Link href="#stot">Støt</Link>
+            </Button>
+          </li>
         </ul>
       </nav>
 
